@@ -39,8 +39,9 @@ export const TransactionsList = () => {
                 sx={{ visibility: isLoading ? "hidden" : "visible" }}
                 variant="caption"
               >
-                {data?.transactions.length ?? 0} result(s) found - U$
-                {data?.total} transacted
+                <span>{data?.transactions.length ?? 0}</span> result(s) found -
+                U$
+                <span>{data?.total}</span> transacted
               </Typography>
 
               <CircularProgress

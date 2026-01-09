@@ -7,10 +7,10 @@ export const Transaction = ({ amount, description }: TransactionModel) => {
       <Box sx={{ minHeight: "max-content" }}>
         <Stack gap={1} sx={{ minHeight: "max-content" }}>
           <Typography variant="body1">
-            <b>Amount:</b> U${amount}
+            <b>Amount:</b> U$<span>{amount}</span>
           </Typography>
           <Typography variant="body1">
-            <b>Description:</b> {description}
+            <b>Description:</b> <span>{description}</span>
           </Typography>
         </Stack>
       </Box>

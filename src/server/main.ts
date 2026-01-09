@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use("/transactions", TransactionsRouter);
+app.use("/api/transactions", TransactionsRouter);
 
 app.get("/hello", (_, res) => {
   res.send("Hello Vite + React + TypeScript!");
@@ -15,3 +15,5 @@ app.get("/hello", (_, res) => {
 ViteExpress.listen(app, 3000, () =>
   console.log("Server is listening on port 3000...")
 );
+
+export default app;

@@ -16,7 +16,7 @@ export const useCreateTransaction = (
   return useMutation<TransactionResponse, AxiosError, Transaction>({
     ...options,
     mutationFn: async (payload) => {
-      const { data } = await axios.post("/transactions", payload);
+      const { data } = await axios.post("/api/transactions", payload);
       return data;
     },
     onSuccess: (...args) => {

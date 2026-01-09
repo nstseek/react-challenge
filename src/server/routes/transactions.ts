@@ -9,7 +9,7 @@ let idCounter = 0;
 
 TransactionsRouter.post("/", (req, res) => {
   transactions.push({ id: (++idCounter).toString(), ...req.body });
-  res.json(transactions.at(-1));
+  res.status(201).json(transactions.at(-1));
 });
 
 TransactionsRouter.get("/", (_, res) => {

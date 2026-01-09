@@ -8,7 +8,7 @@ export const useGetTransactions = () => {
   return useQuery<TransactionResponse>({
     queryKey: GET_TRANSACTIONS_QUERY_KEY,
     queryFn: async () => {
-      const { data } = await axios.get("/transactions");
+      const { data } = await axios.get("/api/transactions");
       return data;
     },
   });
